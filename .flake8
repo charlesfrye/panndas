@@ -1,0 +1,9 @@
+[flake8]
+max-line-length = 101
+ignore = E203,W503
+per-file-ignores = tests/*:S101
+select = B,B9,BLK,C,E,F,I,W
+max-complexity = 10
+# extensions
+application-import-name = panndas,tests
+import-order-style = google
