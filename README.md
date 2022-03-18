@@ -5,6 +5,7 @@
 -----------------
 
 # panndas: neural networks in pandas
+[![Codecov](https://codecov.io/gh/charlesfrye/panndas/branch/master/graph/badge.svg)](https://codecov.io/gh/charlesfrye/panndas)
 [![Tests](https://github.com/charlesfrye/panndas/workflows/Tests/badge.svg)](https://github.com/charlesfrye/panndas/actions?workflow=Tests)
 [![PyPI Latest Release](https://img.shields.io/pypi/v/panndas.svg)](https://pypi.org/project/panndas/)
 [![Package Status](https://img.shields.io/pypi/status/panndas.svg)](https://pypi.org/project/panndas/)

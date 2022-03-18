@@ -15,6 +15,13 @@ def tests(session):
 
 
 @nox.session(python=["3.8", "3.9"])
+def coverage(session):
+    install_with_constraints(session, "coverage[toml]", "codecov")
+    session.run("coverage", "xml", "--fail-under=0")
+    session.run("codecov", *session.posargs)
+
+
+@nox.session(python=["3.8", "3.9"])
 def lint(session):
     args = session.posargs or LOCATIONS
     install_with_constraints(
@@ -28,7 +35,7 @@ def lint(session):
     session.run("flake8", *args)
 
 
-@nox.session(python=["3.9"])
+@nox.session(python=["3.8", "3.9"])
 def fmt(session):
     args = session.posargs or LOCATIONS
     install_with_constraints(session, "black")
