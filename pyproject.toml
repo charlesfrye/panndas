@@ -24,6 +24,7 @@ flake8-import-order = "^0.18.1"
 pytest = "^7.1.1"
 coverage = {extras = ["toml"], version = "^6.3.2"}
 pytest-cov = "^3.0.0"
+twine = "^3.8.0"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
