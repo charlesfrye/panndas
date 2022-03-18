@@ -28,6 +28,6 @@ Here are just a few of the things that panndas does well:
 ## License
 [YOLO](LICENSE)
 
-## Contributing to panndas [![Open Source Helpers](https://www.codetriage.com/pandas-dev/pandas/badges/users.svg)](https://www.codetriage.com/pandas-dev/pandas)
+## Contributing to panndas [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are unwelcome.
