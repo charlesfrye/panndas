@@ -9,7 +9,7 @@
 [![Package Status](https://img.shields.io/pypi/status/panndas.svg)](https://pypi.org/project/panndas/)
 [![License](https://img.shields.io/pypi/l/panndas.svg)](https://github.com/pandas-dev/pandas/blob/main/LICENSE)
 [![Coverage](https://codecov.io/github/charlesfrye/panndas/coverage.svg?branch=main)](https://codecov.io/gh/charlesfrye/panndas)
-[![Downloads](https://static.pepy.tech/personalized-badge/pandas?period=month&units=international_system&left_color=black&right_color=orange&left_text=PyPI%20downloads%20per%20month)](https://pepy.tech/project/panndas)
+[![Downloads](https://static.pepy.tech/personalized-badge/panndas?period=month&units=international_system&left_color=black&right_color=orange&left_text=PyPI%20downloads%20per%20month)](https://pepy.tech/project/panndas)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
 
 ## What is it?
