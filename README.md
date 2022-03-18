@@ -5,6 +5,7 @@
 -----------------
 
 # panndas: neural networks in pandas
+[![Tests](https://github.com/charlesfrye/panndas/workflows/Tests/badge.svg)](https://github.com/charlesfrye/panndas/actions?workflow=Tests)
 [![PyPI Latest Release](https://img.shields.io/pypi/v/panndas.svg)](https://pypi.org/project/panndas/)
 [![Package Status](https://img.shields.io/pypi/status/panndas.svg)](https://pypi.org/project/panndas/)
 [![License](https://img.shields.io/pypi/l/panndas.svg)](https://github.com/pandas-dev/pandas/blob/main/LICENSE)
