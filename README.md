@@ -7,6 +7,7 @@
 # panndas: neural networks in pandas
 [![Tests](https://github.com/charlesfrye/panndas/workflows/Tests/badge.svg)](https://github.com/charlesfrye/panndas/actions?workflow=Tests)
 [![Coverage](https://codecov.io/github/charlesfrye/panndas/coverage.svg?branch=main)](https://codecov.io/gh/charlesfrye/panndas)
+[![Read the Docs](https://readthedocs.org/projects/panndas/badge/)](https://panndas.readthedocs.io/)
 [![PyPI Latest Release](https://img.shields.io/pypi/v/panndas.svg)](https://pypi.org/project/panndas/)
 [![Package Status](https://img.shields.io/pypi/status/panndas.svg)](https://pypi.org/project/panndas/)
 [![License](https://img.shields.io/pypi/l/panndas.svg)](https://github.com/pandas-dev/pandas/blob/main/LICENSE)
@@ -25,7 +26,7 @@ easy and intuitive.
 Here are just a few of the things that panndas does well:
 
   -
-  
+
 ## Frequently asked questions
 
 #### How do you pronounce "panndas"?

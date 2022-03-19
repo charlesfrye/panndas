@@ -5,6 +5,7 @@ version = "0.0.0"
 readme = "README.md"
 homepage = "https://github.com/charlesfrye/panndas"
 repository = "https://github.com/charlesfrye/panndas"
+documentation = "https://panndas.readthedocs.io"
 keywords = ["pandas", "neural networks", "jokes"]
 description = "Neural networks in pandas"
 authors = ["Charles Frye <cfrye59@gmail.com>"]
