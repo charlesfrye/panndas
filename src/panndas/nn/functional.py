@@ -1,15 +1,16 @@
-from .modules import Module
+def softmax(*args, **kwargs):
+    raise NotImplementedError
 
 
-class ReLU(Module):
-    """Ol' ReLU-iable."""
-
-    def forward(self, xs):
-        return xs.applymap(lambda x: max(x, 0))
+def entropy(*args, **kwargs):
+    raise NotImplementedError
 
 
-class LayerMaxNorm(Module):
-    """Normalize across the feature dimension with respect to the infinity norm."""
+def squared_difference(dfX, dfY):
+    """Computes the squared differences between dfX and dfY."""
+    return (dfX - dfY).applymap(lambda r: r**2)
 
-    def forward(self, xs):
-        return xs.divide(xs.abs().max(axis=0), axis=1).fillna(0.0)
+
+def absolute_difference(dfX, dfY):
+    """Computes the absolute differences between dfX and dfY."""
+    return (dfX - dfY).applymap(lambda r: abs(r))
