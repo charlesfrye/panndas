@@ -75,7 +75,7 @@ class LinearAttention(Attention):
 
     def forward(self, xs):
         """Combines queries, keys, and values linearly."""
-        V, Q, K = super().forward(xs)
+        Q, K, V = super().forward(xs)
 
         A = Q.T @ K
         zs = V @ A
@@ -88,7 +88,7 @@ class SoftmaxAttention(Attention):
 
     def forward(self, xs):
         """Uses a softmax over the sequence dim to select which values to attend to."""
-        V, Q, K = super().forward(xs)
+        Q, K, V = super().forward(xs)
 
         A = F.softmax((Q.T @ K).T).T
         zs = V @ A
