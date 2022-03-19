@@ -8,7 +8,7 @@ import tempfile
 import nox
 
 nox.options.sessions = "lint", "tests"
-LOCATIONS = "src", "tests", "noxfile.py", "conf.py"
+LOCATIONS = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
 @nox.session(python=["3.8", "3.9"])
