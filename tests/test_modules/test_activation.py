@@ -3,7 +3,6 @@ import pandas as pd
 import pandas.testing
 from panndas import nn
 from panndas.data import utils
-import pytest
 
 
 class TestReLU:
@@ -39,12 +38,16 @@ class TestLinearAttention:
 
 
 class TestSoftmaxAttention:
-    def test_raises(self):
-        """Tests whether the SoftmaxAttention module is unimplemented."""
+    def test_identity(self):
+        """Tests the SoftmaxAttention module with identity as weights."""
         eye = utils.eye(list(range(5)))
         df = pd.DataFrame(data=eye)
 
         a = nn.SoftmaxAttention(df, df, df)
 
-        with pytest.raises(NotImplementedError):
-            a(df)
+        expected_data = (eye * 0.2558) + (0.1488 * np.ones_like(eye))
+        expected = pd.DataFrame(
+            data=expected_data, index=eye.index, columns=eye.columns
+        )
+
+        pandas.testing.assert_frame_equal(a(df), expected, check_exact=False, rtol=1e-3)
