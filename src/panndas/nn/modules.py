@@ -23,7 +23,7 @@ class Module(object):
 class Sequential(Module):
     """A Module that applies an iterable of Modules sequentially."""
 
-    def __init__(self, *modules):
+    def __init__(self, modules):
         self.modules = modules
 
     def forward(self, xs):
@@ -32,7 +32,7 @@ class Sequential(Module):
         return xs
 
     def show(self):
-        return f"{super().show()}{[self.show(module) for module in self]}"
+        return f"{super().show()}{[module.show() for module in self]}"
 
     def __iter__(self):
         return iter(self.modules)
