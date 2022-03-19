@@ -8,7 +8,7 @@ import tempfile
 import nox
 
 nox.options.sessions = "lint", "tests"
-LOCATIONS = "src", "tests", "noxfile.py"
+LOCATIONS = "src", "tests", "noxfile.py", "docs/conf.py"
 
 
 @nox.session(python=["3.8", "3.9"])
@@ -18,6 +18,24 @@ def tests(session):
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "coverage[toml]", "pytest", "pytest-cov", "torch")
     session.run("pytest", *args)
+
+
+@nox.session(python=["3.8", "3.9"])
+def doctests(session):
+    """Runs the documentation tests with xdoctest."""
+    args = session.posargs or ["all"]
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "xdoctest")
+    session.run("xdoctest", "-m", "panndas", *args)
+
+
+@nox.session(python=["3.8", "3.9"])
+def docs(session):
+    """Build the docs with sphinx."""
+    session.run("poetry", "install", "--no-dev", external=True)
+    install_with_constraints(session, "sphinx")
+    session.run("sphinx-build", "docs", "docs/_build")
+    session.run("sphinx-apidoc", "-o", "docs/_build/source", "src/panndas")
 
 
 @nox.session(python=["3.8", "3.9"])
