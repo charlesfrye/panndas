@@ -4,7 +4,7 @@
 
 -----------------
 
-# panndas: neural networks in pandas
+# `panndas`: neural networks in `pandas`
 [![Tests](https://github.com/charlesfrye/panndas/workflows/Tests/badge.svg)](https://github.com/charlesfrye/panndas/actions?workflow=Tests)
 [![Coverage](https://codecov.io/github/charlesfrye/panndas/coverage.svg?branch=main)](https://codecov.io/gh/charlesfrye/panndas)
 [![Read the Docs](https://readthedocs.org/projects/panndas/badge/)](https://panndas.readthedocs.io/)
@@ -16,20 +16,22 @@
 
 ## What is it?
 
-**pandas** is a Python package that provides fast, flexible, and expressive data
+**Pandas** are bears endemic to China characterized by a bold black-and-white coat, a rotund body, and a [remarkable similarity](https://wp.technologyreview.com/wp-content/uploads/2019/05/adversarial-10.jpg) to [gibbons](https://www.memphiszoo.org/assets/2510/10_white_cheek_gibbon.jpg).
+
+**`pandas`** is a Python package that provides fast, flexible, and expressive data
 structures designed to make working with "relational" or "labeled" data both
 easy and intuitive.
 
-**panndas** is a neural network library built on top of pandas as a joke.
+**`panndas`** is a neural network library built on top of pandas as a joke.
 
 ## Main Features
-Here are just a few of the things that panndas does well:
+Here are just a few of the things that `panndas` does well:
 
   -
 
 ## Frequently asked questions
 
-#### How do you pronounce "panndas"?
+#### How do you pronounce "`panndas`"?
 
 There are two accepted pronunciations: "pa-`None`-das" and "🖕".
 
@@ -41,7 +43,7 @@ There are two accepted pronunciations: "pa-`None`-das" and "🖕".
 
 _Michael Scott_
 
-## Contributing to panndas [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
+## Contributing to `panndas` [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are unwelcome.
 
