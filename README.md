@@ -45,4 +45,4 @@ _Michael Scott_
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are unwelcome.
 
 ## License
-[YOLO](LICENSE)
+[YOLO](http://swansonquotes.com/wp-content/uploads/s05-ep01-permits1-1000x500.jpg)
