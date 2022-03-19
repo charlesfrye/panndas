@@ -36,11 +36,13 @@ There are two accepted pronunciations: "pa-`None`-das" and "🖕".
 
 ### Why?
 
-> > We do this, not because it is easy, but because it is hard.
+> > > We do this not because it is easy, but because it is hard.
+> >
+> > _Wayne Gretsky_
 >
-> _Wayne Gretsky_
+> _Michael Scott_
 
-_Michael Scott_
+_Me_
 
 ## Contributing to `panndas` [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
 
