@@ -7,3 +7,4 @@ max-complexity = 10
 # extensions
 application-import-name = panndas,tests
 import-order-style = google
+docstring-convention = google
