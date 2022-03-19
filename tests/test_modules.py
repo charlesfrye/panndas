@@ -107,3 +107,22 @@ def test_skip_linear():
 
     out = a(df)
     pandas.testing.assert_frame_equal(out, df + df)
+
+
+def test_attention():
+    eye = panndas.nn.math.eye(list(range(5)))
+    df = pd.DataFrame(data=eye)
+
+    a = nn.LinearAttention(df, df, df)
+
+    pandas.testing.assert_frame_equal(a(df), df)
+
+
+def test_softmax_raises():
+    eye = panndas.nn.math.eye(list(range(5)))
+    df = pd.DataFrame(data=eye)
+
+    a = nn.SoftmaxAttention(df, df, df)
+
+    with pytest.raises(NotImplementedError):
+        a(df)
