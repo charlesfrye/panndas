@@ -22,7 +22,7 @@
 structures designed to make working with "relational" or "labeled" data both
 easy and intuitive.
 
-**`panndas`** is a neural network library built on top of pandas as a joke.
+**`panndas`** is a neural network library built on top of `pandas` as a joke.
 
 ## Main Features
 Here are just a few of the things that `panndas` does well:
