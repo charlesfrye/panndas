@@ -2,7 +2,7 @@ from itertools import combinations
 
 import pandas as pd
 
-from ..nn.modules import Module
+from ..nn import Module
 
 
 class Tokenizer(Module):
