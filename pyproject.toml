@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "panndas"
 license = "YOLO"
-version = "0.0.1"
+version = "0.0.2"
 readme = "README.md"
 homepage = "https://github.com/charlesfrye/panndas"
 repository = "https://github.com/charlesfrye/panndas"
