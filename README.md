@@ -25,10 +25,24 @@ easy and intuitive.
 Here are just a few of the things that panndas does well:
 
   -
+  
+## Frequently asked questions
 
-## License
-[YOLO](LICENSE)
+#### How do you pronounce "panndas"?
+
+There are two accepted pronunciations: "pa-`None`-das" and "🖕".
+
+### Why?
+
+> > We do this, not because it is easy, but because it is hard.
+>
+> _Wayne Gretsky_
+
+_Michael Scott_
 
 ## Contributing to panndas [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
 
 All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are unwelcome.
+
+## License
+[YOLO](LICENSE)
