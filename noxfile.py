@@ -34,8 +34,8 @@ def docs(session):
     """Build the docs with sphinx."""
     session.run("poetry", "install", "--no-dev", external=True)
     install_with_constraints(session, "sphinx")
-    session.run("sphinx-build", ".", "docs/")
-    session.run("sphinx-apidoc", "-o", "docs/", "src/panndas")
+    session.run("sphinx-build", "docs", "docs/_build")
+    # session.run("sphinx-apidoc", "-o", "docs/_build", "src/panndas")
 
 
 @nox.session(python=["3.8", "3.9"])

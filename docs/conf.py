@@ -1,4 +1,4 @@
-project = "pandas"
+project = "panndas"
 author = "Charles Frye"
 copyright = "2022, Satan"
 extensions = [
