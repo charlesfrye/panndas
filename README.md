@@ -1,5 +1,8 @@
 <div align="center">
   <img src="https://charlesfrye.github.io/img/panndas-logo.jpeg"><br>
+  <a href="https://colab.research.google.com/drive/1ctgXlDuSxg6MXy90QXZ1OmD9W2_DYf-D?usp=sharing">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+</a>
 </div>
 
 -----------------
