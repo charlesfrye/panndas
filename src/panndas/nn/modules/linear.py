@@ -18,15 +18,20 @@ class Linear(Module):
     Examples:
     >>> import pandas as pd
     >>> import panndas.nn as nn
-    >>> w = pd.DataFrame([[0.0, 1.0],[1.0, 0.0]])
-    >>> w.index = pd.Index(["dim1", "dim2"], name="outputs")
-    >>> w.columns = pd.Index(["dim1", "dim2"], name="inputs")
+    >>> w = pd.DataFrame([[0.0, 1.0],[1.0, 0.0]])              # reflection matrix
+    >>> w.columns = pd.Index(["left", "right"], name="inputs")
+    >>> w.index = pd.Index(["right", "left"], name="outputs")  # reflection mirrors inputs
     >>> l = nn.Linear(weights_df=w, bias_series=0.0)
-    >>> s = pd.Series([1.0, 2.0], index=w.index)
+    >>> s = pd.Series([1.0, 2.0], index=w.columns)
+    >>> s
+    inputs
+    left    1.0
+    right   2.0
+    dtype: float64
     >>> l(s)
     outputs
-    dim1    2.0
-    dim2    1.0
+    right    2.0
+    left     1.0
     dtype: float64
     """
 
