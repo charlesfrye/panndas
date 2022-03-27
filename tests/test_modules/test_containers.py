@@ -25,3 +25,19 @@ class TestSequential:
         assert "Sequential" in show
         assert "Module" in show
         assert len(show.split(",")) == len(s.modules)
+
+    def test_nested_sequential_show(self):
+        """Tests whether nested Sequentials display properly."""
+        ms = [nn.Module() for _ in range(5)]
+        seq1 = nn.Sequential(ms)
+
+        ns = [nn.Module() for _ in range(2)]
+        seq2 = nn.Sequential(ns)
+
+        s = nn.Sequential([seq1, seq2])
+
+        show = s.show()
+
+        assert "Sequential" in show
+        assert "Module" in show
+        assert "\\'" not in show
