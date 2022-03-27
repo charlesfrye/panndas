@@ -25,7 +25,7 @@ def doctests(session):
     """Runs the documentation tests with xdoctest."""
     args = session.posargs or ["all"]
     session.run("poetry", "install", "--no-dev", external=True)
-    install_with_constraints(session, "xdoctest")
+    install_with_constraints(session, "xdoctest", "pygments")
     session.run("xdoctest", "-m", "panndas", *args)
 
 
