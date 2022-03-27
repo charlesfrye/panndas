@@ -8,10 +8,29 @@ class Linear(Module):
 
     Input 'tensors'  can be at most 2-D here: feature (rows) and batch/sequence (columns).
 
-    The weights dataframe should have the input feature space as its column index
-    and the output feature space as its row index."""
+    Args:
+        weights_df: Weights for the affine transform. Column index
+                    is the input feature space and row index is the
+                    output feature space.
+        bias_series: Biases for the affine transform. If not a pd.Series,
+                     presumed to be a single element that is promoted to a Series.
 
-    def __init__(self, weights_df, bias_series=-1):
+    Examples:
+    >>> import pandas as pd
+    >>> import panndas.nn as nn
+    >>> w = pd.DataFrame([[0.0, 1.0],[1.0, 0.0]])
+    >>> w.index = pd.Index(["dim1", "dim2"], name="outputs")
+    >>> w.columns = pd.Index(["dim1", "dim2"], name="inputs")
+    >>> l = nn.Linear(weights_df=w, bias_series=0.0)
+    >>> s = pd.Series([1.0, 2.0], index=w.index)
+    >>> l(s)
+    outputs
+    dim1    2.0
+    dim2    1.0
+    dtype: float64
+    """
+
+    def __init__(self, weights_df, bias_series=-1.0):
         self.w = weights_df
         if not isinstance(bias_series, pd.Series):
             bias_series = pd.Series(

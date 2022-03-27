@@ -4,7 +4,9 @@ from .module import Module
 
 
 class ReLU(Module):
-    """Ol' ReLU-iable."""
+    """Ol' ReLU-iable.
+
+    Applies the recitified linear function, elementwise."""
 
     def forward(self, xs):
         return F.relu(xs)
@@ -17,7 +19,6 @@ class Mish(Module):
     Neural Activation Function."""
 
     def forward(self, xs):
-        """Applies the Mish function, element-wise."""
         return F.mish(xs)
 
 
@@ -25,7 +26,6 @@ class Sigmoid(Module):
     """Applies the sigmoid function, element-wise."""
 
     def forward(self, xs):
-        """Applies the sigmoid function, element-wise."""
         return F.sigmoid(xs)
 
 
@@ -33,7 +33,6 @@ class Tanh(Module):
     """Applies the hyperbolic tangent function, element-wise."""
 
     def forward(self, xs):
-        """Applies the hyperbolic tangent function, element-wise."""
         return F.tanh(xs)
 
 
@@ -41,7 +40,6 @@ class Softplus(Module):
     """Applies the softplus function, element-wise."""
 
     def forward(self, xs):
-        """Applies the softplus function, element-wise."""
         return F.softplus(xs)
 
 
@@ -49,7 +47,6 @@ class Softmax(Module):
     """Applies softmax function, column-wise."""
 
     def forward(self, xs):
-        """Applies softmax function, column-wise."""
         return F.softmax(xs)
 
 
@@ -62,7 +59,6 @@ class Attention(Module):
         self.w_v = values_df
 
     def forward(self, xs):
-        """Computes queries, keys, and values given inputs."""
         Q = self.w_q @ xs
         K = self.w_k @ xs
         V = self.w_v @ xs
@@ -71,10 +67,11 @@ class Attention(Module):
 
 
 class LinearAttention(Attention):
-    """The most basic version of an attention layer."""
+    """The most basic version of an attention layer.
+
+    Combines queries, keys, and values linearly."""
 
     def forward(self, xs):
-        """Combines queries, keys, and values linearly."""
         Q, K, V = super().forward(xs)
 
         A = Q.T @ K
@@ -84,10 +81,11 @@ class LinearAttention(Attention):
 
 
 class SoftmaxAttention(Attention):
-    """The best-known version of an attention layer."""
+    """The best-known version of an attention layer.
+
+    Uses a softmax over the sequence dim to select which values to attend to."""
 
     def forward(self, xs):
-        """Uses a softmax over the sequence dim to select which values to attend to."""
         Q, K, V = super().forward(xs)
 
         A = F.softmax((Q.T @ K).T).T
