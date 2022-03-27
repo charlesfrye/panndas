@@ -9,7 +9,7 @@ class LayerMaxNorm(Module):
 
 
 class BatchNorm1d(Module):
-    """Normalize across the sequence dimension with respect to the 2 norm."""
+    """Standardize each feature across batches and set mean/sd to beta/gamma."""
 
     def __init__(self, eps=1e-05, gamma=1.0, beta=0.0):
         self.eps = eps
@@ -17,6 +17,6 @@ class BatchNorm1d(Module):
         self.beta = beta
 
     def forward(self, xs):
-        mu = xs.mean()
-        sigma = (xs.var() + self.eps).sqrt()
-        return (xs - mu) / (sigma) * self.gamma + self.beta
+        mu = xs.mean(axis=1)
+        sigma = (xs.var(ddof=0, axis=1) + self.eps).pow(0.5)
+        return ((xs.T - mu) / (sigma) * self.gamma + self.beta).T

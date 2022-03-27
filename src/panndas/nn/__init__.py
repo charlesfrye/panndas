@@ -2,6 +2,7 @@ from . import functional
 from .modules import (
     AdditiveSkip,
     AlphaDropout,
+    BatchNorm1d,
     Dropout,
     Identity,
     LayerMaxNorm,
@@ -30,6 +31,7 @@ __all__ = [
     "Softmax",
     "Dropout",
     "AlphaDropout",
+    "BatchNorm1d",
     "LayerMaxNorm",
     "SoftmaxAttention",
     "LinearAttention",
