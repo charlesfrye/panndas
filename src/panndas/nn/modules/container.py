@@ -9,9 +9,9 @@ class Sequential(Module):
             modules: An interable of panndas.nn Modules.
 
         Examples:
-        >>> import panndas.nn as nn
-        >>> m1, m2 = [nn.Module(), nn.Module()]
-        >>> sequential = nn.Sequential([m1, m2])
+            >>> import panndas.nn as nn
+            >>> m1, m2 = [nn.Module(), nn.Module()]
+            >>> sequential = nn.Sequential([m1, m2])
         """
         self.modules = modules
 
