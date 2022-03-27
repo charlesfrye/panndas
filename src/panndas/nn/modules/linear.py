@@ -16,23 +16,23 @@ class Linear(Module):
                      presumed to be a single element that is promoted to a Series.
 
     Examples:
-    >>> import pandas as pd
-    >>> import panndas.nn as nn
-    >>> w = pd.DataFrame([[0.0, 1.0],[1.0, 0.0]])              # reflection matrix
-    >>> w.columns = pd.Index(["left", "right"], name="inputs")
-    >>> w.index = pd.Index(["right", "left"], name="outputs")  # reflection mirrors inputs
-    >>> l = nn.Linear(weights_df=w, bias_series=0.0)
-    >>> s = pd.Series([1.0, 2.0], index=w.columns)
-    >>> s
-    inputs
-    left    1.0
-    right   2.0
-    dtype: float64
-    >>> l(s)
-    outputs
-    right    2.0
-    left     1.0
-    dtype: float64
+        >>> import pandas as pd
+        >>> import panndas.nn as nn
+        >>> w = pd.DataFrame([[0.0, 1.0],[1.0, 0.0]])              # reflection matrix
+        >>> w.columns = pd.Index(["left", "right"], name="inputs")
+        >>> w.index = pd.Index(["right", "left"], name="outputs")  # reflection mirrors inputs
+        >>> l = nn.Linear(weights_df=w, bias_series=0.0)
+        >>> s = pd.Series([1.0, 2.0], index=w.columns)
+        >>> s
+        inputs
+        left    1.0
+        right   2.0
+        dtype: float64
+        >>> l(s)
+        outputs
+        right    2.0
+        left     1.0
+        dtype: float64
     """
 
     def __init__(self, weights_df, bias_series=-1.0):
