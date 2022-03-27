@@ -31,8 +31,8 @@ def softplus(p, beta=1.0, threshold=20.0):
     return _pointwise_map(p, _softplus)
 
 
-def _softplus(x, beta, threshold):
-    if x * beta > threshold:
+def _softplus(x, beta=1.0, threshold=20.0):
+    if (x * beta) > threshold:
         return x
     else:
         return 1.0 / beta * math.log(1 + math.exp(beta * x))
@@ -47,11 +47,7 @@ def _tanh(x):
 
 
 def mish(p):
-    return _pointwise_map(p, _mish)
-
-
-def _mish(x):
-    return softplus(tanh(x))
+    return p * tanh(softplus(p))
 
 
 def sigmoid(p):
@@ -86,3 +82,23 @@ def squared_difference(pX, pY):
 def absolute_difference(pX, pY):
     """Computes the absolute differences between pX and pY."""
     return _pointwise_map(pX - pY)(lambda r: abs(r))
+
+
+def mse_loss(input, target):
+    """Measures the element-wise mean squared error."""
+    mse = squared_difference(input, target).mean()
+
+    if isinstance(mse, pd.Series):
+        mse = mse.mean()
+
+    return mse
+
+
+def l1_loss(input, target):
+    """Measures the element-wise mean absolute error."""
+    mae = absolute_difference(input, target).mean()
+
+    if isinstance(mae, pd.Series):
+        mae = mae.mean()
+
+    return mae
