@@ -2,9 +2,17 @@ from .module import Module
 
 
 class Sequential(Module):
-    """A Module that applies an iterable of Modules sequentially."""
-
     def __init__(self, modules):
+        """A Module that applies an iterable of Modules sequentially.
+
+        Args:
+            modules: An interable of panndas.nn Modules.
+
+        Examples:
+        >>> import panndas.nn as nn
+        >>> m1, m2 = [nn.Module(), nn.Module()]
+        >>> sequential = nn.Sequential([m1, m2])
+        """
         self.modules = modules
 
     def forward(self, xs):
@@ -13,7 +21,7 @@ class Sequential(Module):
         return xs
 
     def show(self):
-        return f"{super().show()}{[module.show() for module in self]}"
+        return f"{super().show()}[{','.join([module.show() for module in self])}]"
 
     def __iter__(self):
         return iter(self.modules)
