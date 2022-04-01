@@ -1,7 +1,7 @@
 <div align="center">
   <img src="https://charlesfrye.github.io/img/panndas-logo.jpeg"><br>
   <a href="https://colab.research.google.com/drive/1ctgXlDuSxg6MXy90QXZ1OmD9W2_DYf-D?usp=sharing">
-  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/>
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" height="50px"/>
 </a>
 </div>
 
@@ -46,6 +46,14 @@ There are two accepted pronunciations: "pa-`None`-das" and "🖕".
 > _Michael Scott_
 
 _Me_
+
+## Try out the `panDformer`, an Attention-Only Transformer
+<div align="center">
+  <img src="https://charlesfrye.github.io/img/emojimix-hugging-panda.png" display="inline" height="50px">
+  <a href="https://colab.research.google.com/drive/1ctgXlDuSxg6MXy90QXZ1OmD9W2_DYf-D?usp=sharing" display="inline">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"/ height="50px" display="inline">
+  </a>
+</div>
 
 ## Contributing to `panndas` [![Open Source Helpers](https://www.codetriage.com/charlesfrye/panndas/badges/users.svg)](https://www.codetriage.com/charlesfrye/panndas)
 
